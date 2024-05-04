@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: todo-service
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:myDb
+    driver-class-name: org.h2.Driver
+#    url: jdbc:sqlite:memory:myDb?cache=shared
+#    driver-class-name: org.sqlite.JDBC
+    username: sa
+    password: sa
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+#    database-platform: com.example.todo.dialect.SQLiteDialect
+    show-sql: true
+server:
+  port:9090
+
